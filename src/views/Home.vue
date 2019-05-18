@@ -1,11 +1,11 @@
 <template>
   <!-- <PersonlPBook/> -->
   <div class="Home">
-        <ul>
+    <!-- <ul>
       <li v-for="(name, index) in svgName" :key="index">
         <svg-icon :iconClass="name"></svg-icon>
       </li>
-    </ul>
+    </ul> -->
     <PersonlPBook/>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     };
   },
   components: {
-    PersonlPBook,
+    // PersonlPBook
     // Footer,
   }
 };
