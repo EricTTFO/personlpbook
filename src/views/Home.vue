@@ -1,26 +1,28 @@
 <template>
   <!-- <PersonlPBook/> -->
   <div class="Home">
-    <ul>
+        <ul>
       <li v-for="(name, index) in svgName" :key="index">
         <svg-icon :iconClass="name"></svg-icon>
       </li>
     </ul>
+    <PersonlPBook/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import PersonlPBook from "@/components/PersonlPBook.vue";
+import PersonlPBook from "@/components/PersonlPBook.vue";
 export default {
   name: "Home",
   data() {
     return {
-      svgName: ["home", "password", "email"]
+      svgName: ["user", "password", "email"]
     };
   },
   components: {
-    // PersonlPBook,
+    PersonlPBook,
+    // Footer,
   }
 };
 </script>

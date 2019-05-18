@@ -13,7 +13,7 @@ const actions = {
         commit
     }){
         const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
-        console.log(response);
+        console.log(response.data);
         commit('putInfo', response.data);
     }
 }

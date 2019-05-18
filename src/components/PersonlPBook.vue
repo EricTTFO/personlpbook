@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- <div class="item header">
+    <div class="item header">
       <div class="logo">标志</div>
       <div class="nav">
         导航
@@ -37,16 +37,16 @@
           4
         </div>
       </div>
-    </div>-->
+    </div>
     <div class="singleInfo" v-for="(singleInfo,index) in allTelInfo" :key="index">
-      <label for>ID:</label>
-      <span>{{ singleInfo.id }}</span>
-      <label for>名字:</label>
-      <span>{{ singleInfo.completed }}</span>
-      <label for>账户:</label>
+      <!-- <label for>ID:</label> -->
+      <!-- <span>{{ singleInfo.id }}</span> -->
+      <!-- <label for>名字:</label> -->
+      <!-- <span>{{ singleInfo.completed }}</span> -->
+      <!-- <label for>账户:</label> -->
       <span>{{ singleInfo.title }}</span>
-      <label for>邮箱:</label>
-      <span>{{ singleInfo.userId }}</span>
+      <!-- <label for>邮箱:</label> -->
+      <!-- <span>{{ singleInfo.userId }}</span> -->
       <!-- <label for>地址:</label>
       <span>{{ singleInfo.address }}</span>
       <label for>网页:</label>
@@ -74,7 +74,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: grid;
-  grid-template-columns: repeat(4 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   .singleInfo {
     border: 1px solid #ccc;
