@@ -8,11 +8,12 @@ const mutations = {
     putInfo: (state,singleInfos) => (state.singleInfos = singleInfos)
 }
 const actions = {
+    
     async pullInterface({
         commit
     }){
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        console.log(response.data)
+        const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+        console.log(response);
         commit('putInfo', response.data);
     }
 }

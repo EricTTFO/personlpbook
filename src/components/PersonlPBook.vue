@@ -21,9 +21,9 @@
           </div>
         </div>
       </div>
-      <div class="sideBar_rt">右侧栏</div> -->
-      <!-- <div class="content"> -->
-        <!-- 内容 -->
+      <div class="sideBar_rt">右侧栏</div> 
+       <div class="content"> 
+         内容
         <div class="contentItem contentItem_one">
           1
         </div>
@@ -36,24 +36,24 @@
         <div class="contentItem_four">
           4
         </div>
-      <!-- </div>
-    </div>
+      </div>
+    </div>-->
     <div class="singleInfo" v-for="(singleInfo,index) in allTelInfo" :key="index">
       <label for>ID:</label>
       <span>{{ singleInfo.id }}</span>
       <label for>名字:</label>
-      <span>{{ singleInfo.name }}</span>
+      <span>{{ singleInfo.completed }}</span>
       <label for>账户:</label>
-      <span>{{ singleInfo.username }}</span>
+      <span>{{ singleInfo.title }}</span>
       <label for>邮箱:</label>
-      <span>{{ singleInfo.email }}</span>
-      <label for>地址:</label>
+      <span>{{ singleInfo.userId }}</span>
+      <!-- <label for>地址:</label>
       <span>{{ singleInfo.address }}</span>
       <label for>网页:</label>
       <span>{{ singleInfo.website }}</span>
       <label for>公司:</label>
-      <span>{{ singleInfo.company }}</span>
-    </div> -->
+      <span>{{ singleInfo.company }}</span> -->
+    </div>
   </div>
 </template>
 
@@ -73,65 +73,22 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  .contentItem_one{
-    grid-area: a;
-    background: red;
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-gap: 1rem;
+  .singleInfo {
+    border: 1px solid #ccc;
+    background: #41b883;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
   }
-  .contentItem_two{
-    grid-area: b;
-    background: deepskyblue;
-  }
-  .contentItem_three{
-    grid-area: c;
-    background: deeppink;
-  }
-  .contentItem_four{
-    grid-area: d;
-    background: deeppink;
-  }
-  grid-template-areas: 
-    "a a a a"
-    "b b . c"
-    "d d d d";
 }
-// .container {
-//   display: grid;
-//   // grid-template-columns: repeat(4 1fr);
-//   // grid-template-columns: 25% 25% 25% 25% ;
-//   // grid-template-rows: auto;
-//   grid-template-areas:
-//   // 'a b c'，
-//   // 'a a a'，
-//   // "a a a b b c c c"
-//   ". a . b b . c .";
-//   .contentItem_one{
-//     grid-area: a;
-//     background: red;
-//   }
-//   .contentItem_two{
-//     grid-area: b;
-//     background: deepskyblue;
-//   }
-//   .contentItem_three{
-//     grid-area: c;
-//     background: deeppink;
-//   }
-  
-//   .singleInfo {
-//     border: 1px solid #ccc;
-//     background: #41b883;
-//     padding: 1rem;
-//     border-radius: 5px;
-//     text-align: center;
-//     position: relative;
-//     cursor: pointer;
-//   }
-// }
-// @media (max-width: 500px) {
-//   .singleInfos {
-//     grid-template-columns: 1fr;
-//   }
-// }
+@media (max-width: 500px) {
+  .singleInfos {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
